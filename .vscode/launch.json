@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(Debug) Launch public_simple01_valid",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/satsolver",
+      "args": [
+        "test/data/parser/public_simple01_valid.in"
+      ],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "build",
+      "env": {
+        "LSAN_OPTIONS": "detect_leaks=0"
+      }
+    },
+    {
+      "name": "(Debug) Launch public_simple01_sat",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/satsolver",
+      "args": [
+        "test/data/solver/public_simple01_sat.in"
+      ],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "build",
+      "env": {
+        "LSAN_OPTIONS": "detect_leaks=0"
+      }
+    }
+  ]
+}
